@@ -128,3 +128,28 @@ With that the eNodeB configuration is complete.
 #epc.conf
 
 
+In the “[mme]” section we need to update the MCC and MNC as above. My “[mme]” section therefore appears as follows:
+
+```bash
+[mme]
+mme_code = 0x1a
+mme_group = 0x0001
+tac = 0x19cb
+mcc = 208
+mnc = 15
+```
+
+#Startup
+
+1) In one terminal launch the EPC:
+```bash
+sudo LD_LIBRARY_PATH=${SRSRAN_INSTALL}/lib sh -c "cd ${HOME}/.config/srsran; ${SRSRAN_INSTALL}/bin/srsepc epc.conf"
+```
+
+2) In another terminal launch the eNodeB:
+```bash
+echo "performance" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+sudo LD_LIBRARY_PATH=${SRSRAN_INSTALL}/lib sh -c "cd ${HOME}/.config/srsran; ${SRSRAN_INSTALL}/bin/srsenb enb.conf"
+```
+
+
