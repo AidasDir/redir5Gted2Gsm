@@ -89,8 +89,11 @@ In the “[enb]” section we need to update the MCC and MNC
 ```bash
 [enb]
 enb_id = 0x19B
-mcc = 999
-mnc = 69
+mcc = 208
+mnc = 15
 ...
+```
+In the “[rf]” section we need to inform srsRAN that we’re using a LimeSDR, while selecting which antenna ports are in use. We use the device_name and device_args parameters for this.
+```bash
 ```
 
