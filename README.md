@@ -83,8 +83,9 @@ git clone https://github.com/bbaranoff/redir5Gted2Gsm/
 cd redir5Gted2Gsm
 cp *.conf /root/.config/srsran
 ```
-Change freq mcc mnc tac
+
 #edit enb.conf
+<br>
 In the “[enb]” section we need to update the MCC and MNC
 ```bash
 [enb]
