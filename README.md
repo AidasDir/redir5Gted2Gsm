@@ -1,16 +1,19 @@
 # redir5Gted2Gsm using LimeSDR
 
 To allow this location to be customised, set an environment variable:
+```bash
 export SRSRAN_INSTALL=${HOME}/srsran
+```
 
 #SoapySDR
-
+```bash
 sudo apt-get install cmake g++ libpython3-dev python3-numpy swig
 git clone --branch soapy-sdr-0.8.1 https://github.com/pothosware/SoapySDR.git
 cd SoapySDR
 mkdir build && cd build
 cmake -DCMAKE_PREFIX_PATH=${SRSRAN_INSTALL} -DCMAKE_INSTALL_PREFIX=${SRSRAN_INSTALL} ..
 make -j`nproc` && make install
+```
 
 Having built and installed the SoapySDR framework, a basic sanity check can be performed:
 ````bash
