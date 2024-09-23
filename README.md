@@ -103,6 +103,9 @@ rx_gain = 40
 device_name = soapy
 device_args = driver=lime,rxant=LNAH,txant=BAND2
 ```
+#rr.conf
+
+Finally we need to select the radio frequency to transmit and receive on, which can conveniently be expressed
 
 Find the cell_list section and update the dl_earfcn parameter. The section of my updated file is as follows:
 ```bash
