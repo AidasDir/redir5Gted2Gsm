@@ -84,3 +84,13 @@ cd redir5Gted2Gsm
 cp *.conf /root/.config/srsran
 ```
 Change freq mcc mnc tac
+#edit enb.conf
+In the “[enb]” section we need to update the MCC and MNC
+```bash
+[enb]
+enb_id = 0x19B
+mcc = 999
+mnc = 69
+...
+```
+
