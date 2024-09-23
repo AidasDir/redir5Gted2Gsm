@@ -115,10 +115,10 @@ cell_list =
   {
     // rf_port = 0;
     cell_id = 0x01;
-    tac = 0x0007;
-    pci = 1;
-    // root_seq_idx = 204;
-    dl_earfcn = 2850;
+    tac = 0x19cb;
+    pci = 2;
+    root_seq_idx = 0;
+    dl_earfcn = 3350;
     //ul_earfcn = 21400;
     ho_active = false;
 ...
