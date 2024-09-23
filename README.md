@@ -95,5 +95,33 @@ mnc = 15
 ```
 In the “[rf]” section we need to inform srsRAN that we’re using a LimeSDR, while selecting which antenna ports are in use. We use the device_name and device_args parameters for this.
 ```bash
+[rf]
+dl_earfcn = 9460
+tx_gain = 80
+rx_gain = 40
+
+device_name = soapy
+device_args = driver=lime,rxant=LNAH,txant=BAND2
 ```
+
+Find the cell_list section and update the dl_earfcn parameter. The section of my updated file is as follows:
+```bash
+...
+cell_list =
+(
+  {
+    // rf_port = 0;
+    cell_id = 0x01;
+    tac = 0x0007;
+    pci = 1;
+    // root_seq_idx = 204;
+    dl_earfcn = 2850;
+    //ul_earfcn = 21400;
+    ho_active = false;
+...
+```
+With that the eNodeB configuration is complete.
+
+#epc.conf
+
 
